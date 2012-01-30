@@ -3,6 +3,7 @@ GEM
   remote: http://geminst:hoa3laml@gems-internal.engineyard.com/
   specs:
     activesupport (2.3.14)
+    addressable (2.2.6)
     builder (3.0.0)
     callsite (0.0.11)
     capistrano (2.9.0)
@@ -16,18 +17,18 @@ GEM
     ey_cluster_xml (0.0.25)
       grit
     ey_statsd (0.0.11)
+    faraday (0.7.6)
+      addressable (~> 2.2)
+      multipart-post (~> 1.1)
+      rack (~> 1.1)
     fastthread (1.0.7)
     grit (2.4.1)
       diff-lcs (~> 1.1)
       mime-types (~> 1.15)
     highline (1.6.9)
-    httparty (0.8.1)
-      multi_json
-      multi_xml
     json (1.6.5)
     mime-types (1.17.2)
-    multi_json (1.0.4)
-    multi_xml (0.4.1)
+    multipart-post (1.1.4)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-sftp (2.0.5)
@@ -62,7 +63,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  httparty
+  faraday
   renee (= 0.4.0.pre1)
   samurai
   shotgun
