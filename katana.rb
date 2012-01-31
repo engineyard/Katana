@@ -14,7 +14,7 @@ class Katana < Renee::Application
     query = array.join(' ')
     puts array
     say "searching for #{query}.."
-    result=`eysearch --extended #{query} 2>&1`
+    result=`bundle exec eysearch --extended #{query} 2>&1`
     regex = /tm\d+-s0+\d+/
     result.to_s.each do |r|
       if regex.match(r)
