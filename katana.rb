@@ -16,7 +16,7 @@ class Katana < Renee::Application
     say "searching for #{query}.."
     result=`bundle exec eysearch --extended #{query} 2>&1`
     regex = /tm\d+-s0+\d+/
-    result.to_s.each do |r|
+    result.to_s.each_line do |r|
       if regex.match(r)
          vm = regex.match(r)
          response = Faraday.get "http://ec2-50-16-52-4.compute-1.amazonaws.com/vm/#{vm}.json"
