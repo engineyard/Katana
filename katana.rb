@@ -7,7 +7,6 @@ class Katana < Renee::Application
     end
   }
 
-  # data is an Array
   def eysearch(search)
     output = []
     array = search.split(',')
