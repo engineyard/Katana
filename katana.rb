@@ -22,7 +22,6 @@ class Katana < Renee::Application
          response = Faraday.get "http://ec2-50-16-52-4.compute-1.amazonaws.com/vm/#{vm}.json"
          say response.body
          output << response.body
-#        puts "#{hash["name"]} has RAM: #{hash["ram"]} and DISK: #{hash["disk"]}"
       end
      end
      halt output.to_json
